@@ -1,0 +1,33 @@
+h3
+{
+    margin: 10px;
+}
+#lefthalf
+{
+    position: absolute;
+    width: 50%;
+    left: 0;
+}
+#righthalf
+{
+    position: absolute;
+    width: 50%;
+    right: 0%;
+}
+.taskPool, #container
+{
+    top: 20%;
+    width: 90%;
+    height: 90%;
+
+    margin: 10px;
+}
+#container
+{
+    display: inline-flex;
+    justify-content: space-around;
+}
+
+.example-card {
+    max-width: 400px;
+  }
