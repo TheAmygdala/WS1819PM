@@ -1,0 +1,17 @@
+#box
+{
+    text-align: center;
+}
+#box2
+{
+    display: flex;
+    justify-content: space-around;
+}
+input
+{
+    margin-bottom: 5px;
+}
+button
+{
+    margin: 10px;
+}

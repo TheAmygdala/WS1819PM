@@ -1,3 +1,18 @@
-<p>
-  login works!
-</p>
+<div id="box">
+    <h3>Herzlich willkommen bei Task-Master</h3>
+    <br>
+    <span>Die App für die Aufgabenverwaltung im SCRUM-Modell</span>
+    <p>WS18/19 Modul - Projektmanagement</p>
+
+    <mat-form-field id="LoginData">
+        <input matInput placeholder="Input">
+    <br>
+        <input matInput placeholder="Passwort" [type]="hide ? 'password' : 'text'">
+        <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+    <br>
+    <div id="box2">
+    <button mat-raised-button color="accent">Login</button>
+    <button mat-raised-button color="accent">Register</button>
+</div>
+</mat-form-field>
+</div>
