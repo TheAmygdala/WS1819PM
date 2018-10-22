@@ -5,17 +5,21 @@
             <mat-icon>more_vert</mat-icon>
           </button>
           <mat-menu #menu="matMenu">
-            <button mat-menu-item>
+            <button mat-menu-item routerLink="task-pool">
               <mat-icon>dashboard</mat-icon>
-              <a routerLink="task-pool">Task-Pool</a>
+              <span>Task-Pool</span>
             </button>
-            <button mat-menu-item>
+            <button mat-menu-item routerLink="login">
               <mat-icon>account_box</mat-icon>
-              <a routerLink="login">Login</a>
+              <span >Login</span>
             </button>
-            <button mat-menu-item>
-              <mat-icon>notifications_off</mat-icon>
-              <span>Disable alerts</span>
+            <button mat-menu-item routerLink="user">
+              <mat-icon>all_inbox</mat-icon>
+              <span >Eigene Aufgaben</span>
+            </button>
+            <button mat-menu-item routerLink="test">
+              <mat-icon >build</mat-icon>
+              <span>Testseite</span>
             </button>
           </mat-menu>
       <span>Task-Master</span>

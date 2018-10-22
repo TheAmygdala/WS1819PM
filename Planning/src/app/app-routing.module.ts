@@ -3,11 +3,15 @@ import { CommonModule } from '@angular/common';
 import {RouterModule, Routes} from "@angular/router";
 import {LoginComponent} from "./login/login.component";
 import { TaskPoolComponent } from './task-pool/task-pool.component';
+import { UserComponent } from './user/user.component';
+import { TestCompComponent } from './test-comp/test-comp.component';
 
 const routes: Routes = [
   {path: "", redirectTo:"/login", pathMatch:"full" },
   {path:"login", component: LoginComponent},
-  {path: "task-pool", component: TaskPoolComponent}
+  {path: "task-pool", component: TaskPoolComponent},
+  {path:"user", component: UserComponent},
+  {path: "test", component: TestCompComponent  }
 ]
 @NgModule({
   imports: [
