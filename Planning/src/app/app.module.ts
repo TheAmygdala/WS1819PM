@@ -8,7 +8,9 @@ import { LoginComponent } from './login/login.component';
 import { CommonTasksComponent } from './common-tasks/common-tasks.component';
 import { UserComponent } from './user/user.component';
 import { TestCompComponent } from './test-comp/test-comp.component';
+import { DAO} from './dao.service';
 
+import { FormsModule } from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
@@ -25,7 +27,7 @@ import {MatInputModule} from '@angular/material/input';
     LoginComponent,
     CommonTasksComponent,
     UserComponent,
-    TestCompComponent
+    TestCompComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,9 +39,10 @@ import {MatInputModule} from '@angular/material/input';
     MatIconModule,
     BrowserAnimationsModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [DAO],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

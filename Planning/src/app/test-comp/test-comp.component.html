@@ -4,17 +4,20 @@
     <span>Die App für die Aufgabenverwaltung im SCRUM-Modell</span>
     <p>WS18/19 Modul - Projektmanagement</p>
 
-    <mat-form-field id="LoginData">
-        <input matInput placeholder="Benutzername">
+    <form name="formular">
+    <mat-form-field>
+        <input name="username" matInput placeholder="Benutzername">
     </mat-form-field>
     <br>
     <mat-form-field>
-        <input matInput placeholder="Passwort" [type]="hide ? 'password' : 'text'">
+        <input name="pw" matInput placeholder="Passwort" [type]="hide ? 'password' : 'text'">
         <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
     </mat-form-field>
     <br>
     <div id="box2">
-        <button mat-raised-button color="accent">Login</button>
+        <button (ngSubmit)="onSubmit($event.target.value);" mat-raised-button color="accent">Login</button>
         <button mat-raised-button color="accent">Register</button>
     </div>
+  </form>
+   <p *ngFor="let p of arr">{{p}}</p>
 </div>
