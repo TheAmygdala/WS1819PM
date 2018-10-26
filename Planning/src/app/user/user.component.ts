@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ITask } from './../itask';
+import { Task } from './../task.service';
 import {DAO } from './../dao.service';
 
 @Component({
@@ -8,7 +8,7 @@ import {DAO } from './../dao.service';
   styleUrls: ['./user.component.css']
 })
 export class UserComponent implements OnInit {
-  task: ITask[] = [];
+  task: Task[] = [];
   dao: DAO;
   
   constructor() { 
@@ -19,10 +19,21 @@ export class UserComponent implements OnInit {
     /**
      * Testdaten
      */
-    this.task.push({
-      taskID: "B100", owner: "Gabriel", title: "Dokumentation", subtitle: "",
-      description: "Programmiere ABC und erstelle daraufhin eine Komponente XYZ über das Tool 123", 
-      done: false, date: new Date()
-    });
+
+     let taskA = new Task("Gabriel", "Aufgabentitel",
+      "Text und Beschreibung für eine Aufgabe", 
+      new Date(),"" 
+      );
+      let taskB = new Task("Horst Seehofer", "Aufgabentitel 2",
+      "Text und Beschreibung für eine Aufgabe 2", 
+      new Date(),"" 
+      );
+      let taskC = new Task("Abra", "Aufgabentitel 3",
+      "Text und Beschreibung für eine Aufgabe 3", 
+      new Date(),"" 
+      );
+      this.task.push(taskA);
+      this.task.push(taskB);
+      this.task.push(taskC);
   }
 }
