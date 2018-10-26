@@ -1,6 +1,6 @@
 <div id="lefthalf">
   <div style="display: inline-flex;">
-    <h3>Allgemeiner Aufgabenpool</h3> 
+    <h3>Allgemeiner Aufgabenpool</h3>
     <button mat-icon-button style="margin: 10px;" (click)="addTask()">
       <mat-icon>note_add</mat-icon>
     </button>
@@ -11,8 +11,17 @@
   </div>
 </div>
 <div id="righthalf">
-  <h3>Aufgabenpool von {{User}}</h3>
-  <div id="container">
+  <div style="display: inline-flex;">
+    <h3>Aufgabenpool von</h3>
+    <mat-form-field>
+      <mat-select placeholder="User">
+        <mat-option *ngFor="let users of user" [value]="users.userName">
+          {{users.userName}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div class="taskpool">
     <app-user></app-user>
   </div>
 </div>

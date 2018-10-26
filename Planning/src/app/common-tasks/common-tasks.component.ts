@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ITask } from './../itask';
+import { Task } from './../task.service';
 import { DAO } from "./../dao.service";
 
 @Component({
@@ -9,7 +9,7 @@ import { DAO } from "./../dao.service";
 })
 export class CommonTasksComponent implements OnInit {
 
-  task: ITask[] = [];
+  task: Task[] = [];
   
   dao: DAO;
 
@@ -26,10 +26,13 @@ export class CommonTasksComponent implements OnInit {
     /**
      * Testdaten
      */
-    this.task.push({
-      taskID: "B100", owner: "Gabriel", title: "Dokumentation", subtitle: "",
-      description: "Erstelle eine Dokumentation", done: false, date: new Date()
-    });
+    
+      let taskA = new Task("Gabriel", "Dokumentation erstellen",
+      "Erstellen einer Dokumentation, über Programmschnittstellen, die zur Hauptkomponente führen", 
+      new Date(),"" 
+      );
+      this.task.push(taskA);
+
   }
 
 }

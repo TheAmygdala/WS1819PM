@@ -17,7 +17,6 @@ export class Task implements ITask
     constructor(owner: string, title:string, description: string, date:Date, subtitle?: string)
     {
         this.owner=owner;
-        
         this.title=title;
         this.description=description;
         this.date=date;

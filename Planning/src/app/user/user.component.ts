@@ -21,7 +21,8 @@ export class UserComponent implements OnInit {
      */
     this.task.push({
       taskID: "B100", owner: "Gabriel", title: "Dokumentation", subtitle: "",
-      description: "Erstelle eine Dokumentation", done: false, date: new Date()
+      description: "Programmiere ABC und erstelle daraufhin eine Komponente XYZ über das Tool 123", 
+      done: false, date: new Date()
     });
   }
 }

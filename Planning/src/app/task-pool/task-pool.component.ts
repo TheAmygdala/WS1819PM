@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { IUser } from "./../iuser";
 
 @Component({
   selector: 'app-task-pool',
@@ -11,12 +12,12 @@ export class TaskPoolComponent implements OnInit {
 
   ngOnInit() {
   }
-
   /**
-   * Aufgabenerstellung. Setzt DB voraus. Evtl. über Array zwischenspeichern
+   * Testdaten für User. Müssen nach Erstellung der DB über die DAO geändert werden
    */
-  addTask()
-  {
-
-  }
+  user: IUser[] = [
+    { userName: "Gabriel", userPW: "PW123" },
+    { userName: "Abra", userPW: "PWKadabra" },
+    { userName: "Horst Seehofer", userPW: "PWKruzifixnochmoa" }
+  ];
 }
