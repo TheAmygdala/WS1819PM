@@ -12,4 +12,11 @@ export class TaskPoolComponent implements OnInit {
   ngOnInit() {
   }
 
+  /**
+   * Aufgabenerstellung. Setzt DB voraus. Evtl. über Array zwischenspeichern
+   */
+  addTask()
+  {
+
+  }
 }

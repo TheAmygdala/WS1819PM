@@ -1,51 +1,53 @@
-<mat-card class="example-card">
+<div *ngFor="let aTask of task">
+  <mat-card class="example-card">
     <mat-card-header>
-      <mat-card-title>{{task.title}}</mat-card-title>
-      <mat-card-subtitle>Dokumentation erstellen</mat-card-subtitle>
+      <mat-card-title>{{aTask.title}}</mat-card-title>
+      <mat-card-subtitle>{{aTask.date}}</mat-card-subtitle>
     </mat-card-header>
-     <mat-card-content>
-      {{task.description}}
+    <mat-card-content>
+      {{aTask.description}}
     </mat-card-content>
     <mat-card-actions>
       <button mat-raised-button color="accent">Annehmen</button>
       <button mat-raised-button color="accent">Bearbeiten</button>
     </mat-card-actions>
   </mat-card>
+</div>
 
-  <mat-card class="example-card">
-      <mat-card-header>
-        <mat-card-title>Aufgabe</mat-card-title>
-        <mat-card-subtitle>Dokumentation erstellen</mat-card-subtitle>
-      </mat-card-header>
-       <mat-card-content>
-        <ul>
-          <li>Schreibe eine Dokumentation über das Programm XYZ</li>
-          <li>Benutze */</li>
-          <li>Kein Notepad</li>
-          <li>Strukturiert</li>
-        </ul>
-      </mat-card-content>
-      <mat-card-actions>
-        <button mat-raised-button color="accent">Annehmen</button>
-        <button mat-raised-button color="accent">Bearbeiten</button>
-      </mat-card-actions>
-    </mat-card>
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title>Aufgabe</mat-card-title>
+    <mat-card-subtitle>Dokumentation erstellen</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <ul>
+      <li>Schreibe eine Dokumentation über das Programm XYZ</li>
+      <li>Benutze */</li>
+      <li>Kein Notepad</li>
+      <li>Strukturiert</li>
+    </ul>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button color="accent">Annehmen</button>
+    <button mat-raised-button color="accent">Bearbeiten</button>
+  </mat-card-actions>
+</mat-card>
 
-    <mat-card class="example-card">
-        <mat-card-header>
-          <mat-card-title>Aufgabe</mat-card-title>
-          <mat-card-subtitle>Dokumentation erstellen</mat-card-subtitle>
-        </mat-card-header>
-         <mat-card-content>
-          <ul>
-            <li>Schreibe eine Dokumentation über das Programm XYZ</li>
-            <li>Benutze */</li>
-            <li>Kein Notepad</li>
-            <li>Strukturiert</li>
-          </ul>
-        </mat-card-content>
-        <mat-card-actions>
-          <button mat-raised-button color="accent">Annehmen</button>
-          <button mat-raised-button color="accent">Bearbeiten</button>
-        </mat-card-actions>
-      </mat-card>
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title>Aufgabe</mat-card-title>
+    <mat-card-subtitle>Dokumentation erstellen</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <ul>
+      <li>Schreibe eine Dokumentation über das Programm XYZ</li>
+      <li>Benutze */</li>
+      <li>Kein Notepad</li>
+      <li>Strukturiert</li>
+    </ul>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button color="accent">Annehmen</button>
+    <button mat-raised-button color="accent">Bearbeiten</button>
+  </mat-card-actions>
+</mat-card>

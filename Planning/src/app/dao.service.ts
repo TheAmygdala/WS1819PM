@@ -35,7 +35,8 @@ export class DAO {
     return //TASKS
   }
 
-  getTasksByTitle(){
+  getTasksByTitle()
+  {
 
   }
   

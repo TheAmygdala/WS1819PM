@@ -1,4 +1,13 @@
-<button style="margin: 10px;" (click)="addTask()">
-  <mat-icon>note_add
-  </mat-icon>
-</button>
+<mat-card class="example-card" *ngFor="let aTask of task">
+        <mat-card-header>
+          <mat-card-title>{{aTask.title}}</mat-card-title>
+          <mat-card-subtitle>{{aTask.subtitle}}</mat-card-subtitle>
+        </mat-card-header>
+         <mat-card-content>
+          {{aTask.description}}
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-raised-button color="warn">Abgeben</button>
+          <button mat-raised-button color="accent">Bearbeiten</button>
+        </mat-card-actions>
+      </mat-card>

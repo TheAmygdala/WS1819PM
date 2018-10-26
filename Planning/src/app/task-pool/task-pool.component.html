@@ -1,12 +1,18 @@
-    <div id="lefthalf">
-      <h3>Allgemeiner Aufgabenpool</h3>
+<div id="lefthalf">
+  <div style="display: inline-flex;">
+    <h3>Allgemeiner Aufgabenpool</h3> 
+    <button mat-icon-button style="margin: 10px;" (click)="addTask()">
+      <mat-icon>note_add</mat-icon>
+    </button>
+  </div>
 
-      <div class="taskPool">
-      <app-common-tasks></app-common-tasks>
-      </div>
-    </div>
-    <div id="righthalf">
-      <h3>Aufgabenpool von {{User}}</h3>
-      <div id="container">
-      </div>
-    </div>
+  <div class="taskPool">
+    <app-common-tasks></app-common-tasks>
+  </div>
+</div>
+<div id="righthalf">
+  <h3>Aufgabenpool von {{User}}</h3>
+  <div id="container">
+    <app-user></app-user>
+  </div>
+</div>

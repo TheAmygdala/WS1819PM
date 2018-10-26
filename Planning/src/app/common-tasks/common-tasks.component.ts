@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ITask} from './../itask';
+import { ITask } from './../itask';
+import { DAO } from "./../dao.service";
 
 @Component({
   selector: 'app-common-tasks',
@@ -8,13 +9,27 @@ import { ITask} from './../itask';
 })
 export class CommonTasksComponent implements OnInit {
 
-  task: ITask;
+  task: ITask[] = [];
+  
+  dao: DAO;
 
+  /*
+    fillTasks()
+    {
+      task füllen.
+      Hole Tasks über die DAO aus der Datenbank
+    }
+    */
   constructor() { }
 
   ngOnInit() {
-    this.task = {taskID: "B100", owner: "Gabriel", title: "Dokumentation", subtitle: "", 
-    description: "Erstelle eine Dokumentation", done: false, date: new Date()};
+    /**
+     * Testdaten
+     */
+    this.task.push({
+      taskID: "B100", owner: "Gabriel", title: "Dokumentation", subtitle: "",
+      description: "Erstelle eine Dokumentation", done: false, date: new Date()
+    });
   }
 
 }
