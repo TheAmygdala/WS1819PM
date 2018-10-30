@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Task } from './../task.service';
-import { DAO } from "./../dao.service";
+import { DAO } from './../dao.service';
 
 @Component({
   selector: 'app-common-tasks',
@@ -9,7 +9,7 @@ import { DAO } from "./../dao.service";
 })
 export class CommonTasksComponent implements OnInit {
 
-  task: Task[] = [];  
+  task: Task[] = [];
   dao: DAO;
 
   /*
@@ -25,17 +25,17 @@ export class CommonTasksComponent implements OnInit {
     /**
      * Testdaten
      */
-      let taskA = new Task("Gabriel", "Dokumentation erstellen",
-      "Erstellen einer Dokumentation, über Programmschnittstellen, die zur Hauptkomponente führen", 
-      new Date(),"" 
+      let taskA = new Task('Gabriel', 'Dokumentation erstellen',
+      'Erstellen einer Dokumentation, über Programmschnittstellen, die zur Hauptkomponente führen',
+      new Date(), ''
       );
-      let taskB = new Task("Horst Seehofer", "Programmieren",
-      "Drei Komponenten erstellen, die einen Service als Speicher bereitstellen", 
-      new Date(),"" 
+      let taskB = new Task('Horst Seehofer', 'Programmieren',
+      'Drei Komponenten erstellen, die einen Service als Speicher bereitstellen',
+      new Date(), ''
       );
-      let taskC = new Task("Abra", "Konzeption",
-      "Klassendiagramm erstellen, mit Kanten und Beziehungen + Kardinalitäten", 
-      new Date(),"" 
+      let taskC = new Task('Abra', 'Konzeption',
+      'Klassendiagramm erstellen, mit Kanten und Beziehungen + Kardinalitäten',
+      new Date(), ''
       );
       this.task.push(taskA);
       this.task.push(taskB);

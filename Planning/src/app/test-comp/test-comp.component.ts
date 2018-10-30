@@ -7,15 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TestCompComponent implements OnInit {
 
-  arr:any[];
+  arr: any[];
   constructor() { }
-  
   ngOnInit() {
-    this.arr = ["Pokemon"];
+    this.arr = ['Pokemon'];
   }
-  
-  onSubmit(wert)
-  {
+  onSubmit(wert) {
     this.arr.push(wert);
     console.log(this.arr);
   }

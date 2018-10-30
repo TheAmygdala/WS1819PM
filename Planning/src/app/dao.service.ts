@@ -20,44 +20,37 @@ export class DAO {
    */
   addTask(title: string, description: string, date: Date, subtitle?:string)
   {
-    let taskID=uuid();
-    let newTask = new Task("TESTOWNER", title, description, date, subtitle);
+    let taskID = uuid();
+    let newTask = new Task( 'TESTOWNER', title, description, date, subtitle);
     //ADD TO DB
   }
 
-  removeTask(taskID: string)
-  {
+  removeTask(taskID: string) {
     //REMOVE FROM DB
   }
 
-  getTasksByOwner():Task[]
-  {
+  getTasksByOwner(): Task[] {
     return //TASKS
   }
 
-  getTasksByTitle()
-  {
+  getTasksByTitle() {
 
   }
-  
-  setTaskTitle()
-  {
+
+  setTaskTitle() {
 
   }
-  setTaskDescription()
-  {
+  setTaskDescription() {
 
   }
   setTaskOwner()
   {
 
   }
-  setTaskDone()
-  {
+  setTaskDone() {
 
   }
-  setTaskDate()
-  {
+  setTaskDate() {
 
   }
 }

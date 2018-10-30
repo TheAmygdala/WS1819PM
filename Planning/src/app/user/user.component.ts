@@ -10,9 +10,9 @@ import {DAO } from './../dao.service';
 export class UserComponent implements OnInit {
   task: Task[] = [];
   dao: DAO;
-  
-  constructor() { 
-    
+
+  constructor() {
+
   }
 
   ngOnInit() {
@@ -20,17 +20,17 @@ export class UserComponent implements OnInit {
      * Testdaten
      */
 
-     let taskA = new Task("Gabriel", "Aufgabentitel",
-      "Text und Beschreibung für eine Aufgabe", 
-      new Date(),"" 
+     let taskA = new Task('Gabriel', 'Aufgabentitel',
+      'Text und Beschreibung für eine Aufgabe', 
+      new Date(), ''
       );
-      let taskB = new Task("Horst Seehofer", "Aufgabentitel 2",
-      "Text und Beschreibung für eine Aufgabe 2", 
-      new Date(),"" 
+      let taskB = new Task('Horst Seehofer', 'Aufgabentitel 2',
+      'Text und Beschreibung für eine Aufgabe 2', 
+      new Date(), ''
       );
-      let taskC = new Task("Abra", "Aufgabentitel 3",
-      "Text und Beschreibung für eine Aufgabe 3", 
-      new Date(),"" 
+      let taskC = new Task('Abra', 'Aufgabentitel 3',
+      'Text und Beschreibung für eine Aufgabe 3', 
+      new Date(), ''
       );
       this.task.push(taskA);
       this.task.push(taskB);
