@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Task } from './../task.service';
-import {DAO } from './../dao.service';
+import { Memory } from './../memory.service';
 
 @Component({
   selector: 'app-user',
@@ -9,12 +9,9 @@ import {DAO } from './../dao.service';
 })
 export class UserComponent implements OnInit {
   task: Task[] = [];
-  dao: DAO;
-  
-  constructor() { 
-    
+  constructor(public memory: Memory) { 
   }
-
+  
   ngOnInit() {
     /**
      * Testdaten

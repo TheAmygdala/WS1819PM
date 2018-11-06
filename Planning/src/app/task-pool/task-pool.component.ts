@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IUser } from "./../iuser";
+import { Memory} from "./../memory.service";
 
 @Component({
   selector: 'app-task-pool',
@@ -8,16 +9,14 @@ import { IUser } from "./../iuser";
 })
 export class TaskPoolComponent implements OnInit {
 
-  constructor() { }
+  constructor(public memory: Memory) { }
 
+  users: IUser[];
   ngOnInit() {
+    this.users = this.memory.user;
   }
   /**
    * Testdaten für User. Müssen nach Erstellung der DB über die DAO geändert werden
    */
-  user: IUser[] = [
-    { userName: "Gabriel", userPW: "PW123" },
-    { userName: "Abra", userPW: "PWKadabra" },
-    { userName: "Horst Seehofer", userPW: "PWKruzifixnochmoa" }
-  ];
+  
 }
