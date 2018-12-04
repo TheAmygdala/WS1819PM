@@ -1,3 +1,15 @@
-<mat-card>
-  
-</mat-card>
+<div *ngFor="let sprint of sprints">
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title>{{sprint.bDate}}</mat-card-title>
+        <mat-card-subtitle>{{sprint.eDate}}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        {{tasks.blabla}}
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button color="accent">Annehmen</button>
+        <button mat-raised-button color="accent">Bearbeiten</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>

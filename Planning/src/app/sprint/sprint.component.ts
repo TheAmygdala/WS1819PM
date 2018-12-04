@@ -13,3 +13,7 @@ export class SprintComponent implements OnInit {
   }
 
 }
+
+interface Sprint{
+  
+}
