@@ -13,11 +13,3 @@ export class SprintComponent implements OnInit {
   }
 
 }
-
-class Sprint
-{
-  bDate: Date;
-  eDate: Date;
-  sprint: number;
-  taskStore: []
-}
