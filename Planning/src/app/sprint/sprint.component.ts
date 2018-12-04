@@ -14,6 +14,10 @@ export class SprintComponent implements OnInit {
 
 }
 
-interface Sprint{
-  
+class Sprint
+{
+  bDate: Date;
+  eDate: Date;
+  sprint: number;
+  taskStore: []
 }
