@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { IUser } from "./../iuser";
+import {User} from './../user.service';
 import { Memory} from "./../memory.service";
 
 @Component({
@@ -11,12 +11,9 @@ export class TaskPoolComponent implements OnInit {
 
   constructor(public memory: Memory) { }
 
-  users: IUser[];
+  users: User[];
   ngOnInit() {
     this.users = this.memory.user;
   }
-  /**
-   * Testdaten für User. Müssen nach Erstellung der DB über die DAO geändert werden
-   */
   
 }

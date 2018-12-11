@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { v4 as uuid } from 'uuid';
 import {Task} from './task.service';
+import {User} from './user.service';
 
 @Injectable({
   providedIn: 'root'

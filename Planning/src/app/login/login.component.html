@@ -4,19 +4,27 @@
     <span>Die App für die Aufgabenverwaltung im SCRUM-Modell</span>
     <p>WS18/19 Modul - Projektmanagement</p>
 
-    <form name="loginForm">
+    <form name="loginForm" id="loginForm">
     <mat-form-field>
-        <input matInput placeholder="Benutzername" [(ngModel)]="username" name="theName">
+        <input matInput placeholder="Benutzername" [(ngModel)]="username" id="theName" name="theName" #theName="ngModel" minlength="10">
     </mat-form-field>
     <br>
     <mat-form-field>
-        <input matInput placeholder="Passwort" [type]="hide ? 'password' : 'text'" [(ngModel)]="pw" name="thePw">
+        <input matInput placeholder="Passwort" [type]="hide ? 'password' : 'text'" [(ngModel)]="pw" id="thePw" name="thePw" #thePw="ngModel">
         <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
     </mat-form-field>
     <br>
     <div id="box2">
-        <button mat-raised-button color="accent" (click)="login();">Login</button>
-        <button mat-raised-button color="accent" (click)="register();">Register</button>
+        <button mat-raised-button type="submit" color="accent" (click)="login();">Login</button>
+        <button mat-raised-button color="primary" (click)="register();">Register</button>
+    </div>
+    <button mat-raised-button color="accent" (click)="logout()">Logout</button>
+    <button mat-raised-button color="secondary" type="reset">Reset</button>
+    <div>
+    <p></p>
+    <em style="color: red;" *ngIf="theName.touched||theName.dirty">Benutzername ist eine Pflichtangabe!</em>
+    <p></p>
+    <em style="color: red;" *ngIf="thePw.touched||thePw.dirty">Passwort ist eine Pflichtangabe!</em>
     </div>
 </form>
 </div>

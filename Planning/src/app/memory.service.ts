@@ -1,12 +1,12 @@
 import { Injectable, OnInit } from '@angular/core';
 import {Task} from './task.service';
-import {IUser} from "./iuser";
+import {User} from "./user.service";
 
 @Injectable({
   providedIn: 'root'
 })
 export class Memory{
-  user: IUser[];
+  user: User[]=[];
 
   task: Task[] = [];
 
@@ -30,10 +30,9 @@ export class Memory{
     this.task.push(taskB);
     this.task.push(taskC);
 
-    this.user = [
-      { userName: "Gabriel", userPW: "PW123" },
-      { userName: "Abra", userPW: "PWKadabra" },
-      { userName: "Horst Seehofer", userPW: "PWKruzifixnochmoa" }
-    ];
+    this.user.push(new User('Frank Drebin', '1'));
+    this.user.push(new User('Monkey D. Ruffy','2'));
+    this.user.push(new User('Vegeta', '9001'));
+    this.user.push(new User('Saitama', 'One Punch'));
    }
 }

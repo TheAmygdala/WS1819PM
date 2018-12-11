@@ -15,7 +15,7 @@
     <h3>Aufgabenpool von</h3>
     <mat-form-field>
       <mat-select placeholder="User">
-        <mat-option *ngFor="let users of user" [value]="users.userName">
+        <mat-option *ngFor="let users of user" [value]="users.userCount">
           {{users.userName}}
         </mat-option>
       </mat-select>

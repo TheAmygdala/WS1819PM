@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Memory} from "./../memory.service";
-import {IUser} from "./../iuser";
+import { Memory } from "./../memory.service";
+import { User } from "./../user.service";
 
 @Component({
   selector: 'app-login',
@@ -9,24 +9,40 @@ import {IUser} from "./../iuser";
 })
 export class LoginComponent implements OnInit {
   constructor(public memory: Memory) { }
-  users:IUser[];
+  users: User[];
   username: string;
   pw: string;
 
   ngOnInit() {
     this.users = this.memory.user;
-    this.username="";
-    this.pw="";
+    this.username = "";
+    this.pw = "";
   }
-  register()
-  {
-    console.log("Erfolg Regisister");
-    //this.users.push({userName: this.username, userPW: this.pw});
+  register() {
+    let ts: boolean;
+    ts = false;
+    this.users.forEach(aUser => {
+      if (aUser.userName === this.username) {
+        console.error("Den User gibt es bereits");
+        ts = true;
+      }
+    });
+    if (ts === false) {
+      this.users.push(new User(this.username, this.pw));
+      console.log(this.users);
+      this.login();
+    }
+
   }
-  login()
-  {
-    console.log("Erfolg");
+  login() {
+    console.log("Erfolg Login");
+    //this.users.login(username, userpw);
   }
+  logout() {
+    console.log("Erfolg Logout!");
+    //this.users.logout();
+  }
+
 
 
 
