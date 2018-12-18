@@ -21,8 +21,15 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
+<<<<<<< Updated upstream
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { SprintComponent } from './sprint/sprint.component';
+=======
+import { AngularFireModule } from 'angularfire2';
+import { AngularFirestoreModule } from 'angularfire2/firestore';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+import { environment } from '../environments/environment';
+>>>>>>> Stashed changes
 
 @NgModule({
   declarations: [
@@ -47,7 +54,13 @@ import { SprintComponent } from './sprint/sprint.component';
     MatInputModule,
     FormsModule,
     MatSelectModule,
+<<<<<<< Updated upstream
     MatDatepickerModule
+=======
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule, // imports firebase/firestore, only needed for database features
+    AngularFireAuthModule, // imports firebase/auth, only needed for auth features,
+>>>>>>> Stashed changes
   ],
   providers: [DAO, Memory],
   bootstrap: [AppComponent]

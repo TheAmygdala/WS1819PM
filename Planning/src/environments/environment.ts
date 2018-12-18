@@ -3,6 +3,14 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
+  firebase: {
+  apiKey: "AIzaSyD4IYc_eDmlqY90K4k0H-5I34Xok8coqIE",
+  authDomain: "projekttool-nani.firebaseapp.com",
+  databaseURL: "https://projekttool-nani.firebaseio.com",
+  projectId: "projekttool-nani",
+  storageBucket: "projekttool-nani.appspot.com",
+  messagingSenderId: "6861366979"
+},
   production: false
 };
 

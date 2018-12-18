@@ -21,8 +21,17 @@
   </form>
    <p *ngFor="let p of arr">{{p}}</p>
 </div>
+<<<<<<< Updated upstream
 <mat-form-field>
     <input matInput [matDatepicker]="picker" placeholder="Choose a date">
     <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
     <mat-datepicker #picker></mat-datepicker>
   </mat-form-field>
+=======
+
+
+<div *ngFor="let test of tests | async">
+    <p>{{ test.name }}</p>
+    <p>{{ test.zahl }}</p>
+</div>
+>>>>>>> Stashed changes
