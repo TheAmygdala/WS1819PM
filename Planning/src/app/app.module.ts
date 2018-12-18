@@ -9,6 +9,7 @@ import { CommonTasksComponent } from './common-tasks/common-tasks.component';
 import { UserComponent } from './user/user.component';
 import { TestCompComponent } from './test-comp/test-comp.component';
 import { DAO} from './dao.service';
+import {Memory} from './/memory.service';
 
 import { FormsModule } from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
@@ -20,6 +21,8 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { SprintComponent } from './sprint/sprint.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +32,7 @@ import {MatSelectModule} from '@angular/material/select';
     CommonTasksComponent,
     UserComponent,
     TestCompComponent,
+    SprintComponent,
   ],
   imports: [
     BrowserModule,
@@ -42,9 +46,10 @@ import {MatSelectModule} from '@angular/material/select';
     MatFormFieldModule,
     MatInputModule,
     FormsModule,
-    MatSelectModule
+    MatSelectModule,
+    MatDatepickerModule
   ],
-  providers: [DAO],
+  providers: [DAO, Memory],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

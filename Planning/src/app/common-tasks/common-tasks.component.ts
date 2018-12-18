@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Task } from './../task.service';
+<<<<<<< HEAD
 import { DAO } from './../dao.service';
+=======
+import { Memory } from './../memory.service';
+>>>>>>> a939c491544b33f2e87fb0d4127dca8bca3962df
 
 @Component({
   selector: 'app-common-tasks',
@@ -8,6 +12,7 @@ import { DAO } from './../dao.service';
   styleUrls: ['./common-tasks.component.css']
 })
 export class CommonTasksComponent implements OnInit {
+<<<<<<< HEAD
 
   task: Task[] = [];
   dao: DAO;
@@ -40,6 +45,16 @@ export class CommonTasksComponent implements OnInit {
       this.task.push(taskA);
       this.task.push(taskB);
       this.task.push(taskC);
-  }
+=======
+  task:Task[];
+  constructor(public memory:Memory) {}
 
+  ngOnInit() {
+    this.task = this.memory.task;
+  }
+  addTask()
+  {
+    
+>>>>>>> a939c491544b33f2e87fb0d4127dca8bca3962df
+  }
 }

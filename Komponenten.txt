@@ -1,0 +1,36 @@
+Komponenten:
+- task-pool
+Die Task-Pool Komponente, hat keine andere Aufgabe, als die Seite für alle verfügbaren Tasks in zwei Teile zu teilen.
+Die linke Seite enthält die Komponente "common-tasks", worin alle verfügbaren Tasks im Aufgabenpool sind.
+Die rechte Seite enthält die Komponente "user", worin alle zugeordneten Tasks eines ausgewählten Users angezeigt werden.
+
+- user
+Enthält alle Tasks des eingeloggten Users. Holt sich alle Tasks aus dem Service "memory"
+
+- common-tasks
+Enthält alle verfügbaren Tasks. Sprich, es ist der gesamte Aufgabenpool. Holt sich alle Tasks aus dem Service "memory"
+
+- login
+Ein No-Brainer. Enthält die Komponente, die sich um das Login kümmert
+
+- test-comp
+Eine Testklasse. Kann vernachlässigt werden. Hat keinen praktischen Nutzen. Dient nur zu Testzwecken.
+
+Services:
+- memory.service.ts
+Unser vorzeitiger Speicher, da wir noch keine Datenbank haben. Dort werden alle Tasks und User gespeichert.
+
+- task.service.ts
+Enthält die task Klasse. Damit können neue Task-Objekte erstellt werden.
+
+- dao.service.ts
+Damit sollen später alle CRUD-Befehle (Create Read Update Delete) abgebildet werden. Dieser Service soll dann später von allen Komponenten angesprochen werden, um auf die Datenbank zuzugreifen.
+
+Interfaces:
+- Iuser.ts
+Gibt Vorgabe für Userdaten. Im Gegensatz zu "Itasks.ts" gibt es jedoch noch keinen "user.service.ts". Das Interface habe ich in "memory.service.ts" einfach implementiert. 
+
+- Itasks.ts
+Wird von "task.service.ts" implementiert. Gibt Vorgabe für Taskobjekte.
+
+Klassen:
