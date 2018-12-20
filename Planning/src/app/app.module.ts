@@ -26,6 +26,7 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { environment } from '../environments/environment';
 import { SprintComponent } from './sprint/sprint.component';
+import {MatDatepickerModule} from '@angular/material/datepicker';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,7 @@ import { SprintComponent } from './sprint/sprint.component';
     CommonTasksComponent,
     UserComponent,
     TestCompComponent,
-    SprintComponent,
+    SprintComponent
   ],
   imports: [
     BrowserModule,
@@ -50,6 +51,7 @@ import { SprintComponent } from './sprint/sprint.component';
     MatInputModule,
     FormsModule,
     MatSelectModule,
+    MatDatepickerModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features
     AngularFireAuthModule, // imports firebase/auth, only needed for auth features,
