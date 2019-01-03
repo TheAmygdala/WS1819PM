@@ -5,6 +5,7 @@ import { IUser} from './iuser';
   providedIn: 'root'
 })
 export class User implements IUser{
+  isAuthenticated: boolean;
   userCount: number;
   userName:string;
   userPW:string;

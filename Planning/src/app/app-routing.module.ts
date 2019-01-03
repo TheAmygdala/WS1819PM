@@ -7,13 +7,15 @@ import { UserComponent } from './user/user.component';
 import { TestCompComponent } from './test-comp/test-comp.component';
 import { SprintComponent } from './sprint/sprint.component';
 
+import { AuthGuard } from './auth.guard';
+
 const routes: Routes = [
-  {path: "", redirectTo:"/login", pathMatch:"full" },
-  {path:"login", component: LoginComponent},
-  {path: "task-pool", component: TaskPoolComponent},
-  {path:"user", component: UserComponent},
-  {path: "test", component: TestCompComponent  },
-  {path: "sprint", component: SprintComponent }
+  {path: '', redirectTo: '/login', pathMatch: 'full' },
+  {path: 'login', component: LoginComponent },
+  {path: 'task-pool', component: TaskPoolComponent, canActivate: [AuthGuard] },
+  {path: 'user', component: UserComponent, canActivate: [AuthGuard] },
+  {path: 'test', component: TestCompComponent, canActivate: [AuthGuard] },
+  {path: 'sprint', component: SprintComponent, canActivate: [AuthGuard] }
 ]
 @NgModule({
   imports: [
@@ -23,6 +25,7 @@ const routes: Routes = [
   exports: [
     RouterModule
   ],
-  declarations: []
+  declarations: [],
+  providers: [ AuthGuard ]
 })
 export class AppRoutingModule { }
